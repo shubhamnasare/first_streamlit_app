@@ -41,7 +41,8 @@ try:
     fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
     # output it the screen as a table
     streamlit.dataframe(fruityvice_normalized)
-
+ except URLError as e:
+    streamlit.error()
 streamlit.stop()
 
 #snowflake
